@@ -1,4 +1,4 @@
-# Flim Flower
+# Flim Flowers
 
 This is an interactive data visualization project created with p5.js to display historical box office data from China.
 
