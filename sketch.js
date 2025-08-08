@@ -16,8 +16,8 @@ const sketch = (p) => {
 
   // preload the CSV file and the legend image before the sketch starts
   p.preload = () => {
-    filmData = p.loadTable("new_flower_film.csv", "header");
-    legendImage = p.loadImage('legend.png');
+    filmData = p.loadTable("/dataviz-flim-flower/new_flower_film.csv", "header");
+    legendImage = p.loadImage('/dataviz-flim-flower/legend.png');
 
   }
 
