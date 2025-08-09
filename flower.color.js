@@ -19,7 +19,7 @@ export class FlowerColor {
         this.p = p;
         this.x = x;
         this.y = y;
-        this.flowerSize = flowerSize || 1;  // if the size has not been defined, set it to 1
+        this.flowerSize = flowerSize || 0.5;  // if the size has not been defined, set it to 1
         this.colorNum = colorList.length;
         this.colors = [];
 
@@ -28,7 +28,7 @@ export class FlowerColor {
             const hexColor = CAT_TO_COLOR_MAP[categoryName] || CAT_TO_COLOR_MAP["其它"];
             
             const c = this.p.color(hexColor);
-            c.setAlpha(150);
+            c.setAlpha(130);
             this.colors.push(c);
             }
         }    
@@ -52,7 +52,7 @@ export class FlowerColor {
             for (let n = 0; n < this.colorNum; n++) {
                 bgLayer.fill(this.colors[n]);
                 bgLayer.rotate(this.p.radians(colorAngle));
-                bgLayer.ellipse(-20 * this.flowerSize, 0, 50 * this.flowerSize, 50 * this.flowerSize);  // make the multiple circles overlap a bit
+                bgLayer.ellipse(-20 * this.flowerSize, 0, 90 * this.flowerSize, 90 * this.flowerSize);  // make the multiple circles overlap a bit
             }
         }
         
