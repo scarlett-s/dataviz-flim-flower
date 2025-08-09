@@ -19,7 +19,7 @@ export class FlowerColor {
         this.p = p;
         this.x = x;
         this.y = y;
-        this.flowerSize = flowerSize || 0.5;  // if the size has not been defined, set it to 1
+        this.flowerSize = flowerSize || 1;  // if the size has not been defined, set it to 1
         this.colorNum = colorList.length;
         this.colors = [];
 
@@ -52,7 +52,7 @@ export class FlowerColor {
             for (let n = 0; n < this.colorNum; n++) {
                 bgLayer.fill(this.colors[n]);
                 bgLayer.rotate(this.p.radians(colorAngle));
-                bgLayer.ellipse(-20 * this.flowerSize, 0, 90 * this.flowerSize, 90 * this.flowerSize);  // make the multiple circles overlap a bit
+                bgLayer.ellipse(-25 * this.flowerSize, 0, 90 * this.flowerSize, 90 * this.flowerSize);  // make the multiple circles overlap a bit
             }
         }
         
