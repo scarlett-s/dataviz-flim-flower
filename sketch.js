@@ -50,6 +50,20 @@ const sketch = (p) => {
   // draw the foreground layer canvas
   function drawFgLayer() {
     if (!dataProcessed) return; // safety check
+
+    let isHoveringAnyFlower = false;
+    for (let i =0; i < dataProcessed.flowers.length; i++) {
+      if (dataProcessed.flowers[i].isHovered(p.mouseX, p.mouseY)) {
+        isHoveringAnyFlower = true;
+        break;
+      }      
+    }
+
+    if (isHoveringAnyFlower) {
+      p.cursor(p.HAND);
+    } else {
+      p.cursor(p.ARROW);
+    }
     
     // draw the font style, content and position of project title
     p.push();
