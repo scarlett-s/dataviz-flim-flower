@@ -89,11 +89,11 @@ export function processData(data, p) {
             else { flowerSize = 0.25; }
             
             // map the box office revenue to the number of petals
-            if (box_office > 50) { petalCount = 9; }
-            else if (box_office > 30) { petalCount = 8; }
-            else if (box_office > 16) { petalCount = 7; }
-            else if (box_office > 8) { petalCount = 6; }
-            else { petalCount = 5; }
+            if (box_office > 50) { petalCount = 8; }
+            else if (box_office > 30) { petalCount =7; }
+            else if (box_office > 16) { petalCount = 6; }
+            else if (box_office > 8) { petalCount = 5; }
+            else { petalCount = 4; }
 
             const petalType = COUNTRY_TO_TYPE[country] || 'petal1';
         
